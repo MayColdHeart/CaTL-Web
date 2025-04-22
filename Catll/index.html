@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<header>
+    <h1>CaTL</h1>
+</header>
+
+<body>
+
+    <ol>
+        <button class="form" onclick="gerarChamado(1)">Novo Equipamento</button>
+        <button onclick="gerarChamado(2)">Instalação</button>
+        <button onclick="gerarChamado(3)">Desinstalação</button>
+        <button onclick="gerarChamado(4)">Remanejamento Interno</button>
+        <button onclick="gerarChamado(5)">Remanejamento Externo</button>
+        <button onclick="gerarChamado(6)">Atualização Cadastral</button>
+        <button onclick="gerarChamado(7)">Periféricos (vídeo)</button>
+        <button onclick="gerarChamado(8)">Periféricos (Mouse)</button>
+        <button onclick="gerarChamado(9)">Periféricos (Teclado)</button>
+        <button onclick="gerarChamado(10)">Organizadores de Cabos</button>
+        <button onclick="gerarChamado(11)">Habilitar Pontos de Rede</button>
+        <button onclick="gerarChamado(12)">Cabos de Rede</button>
+        <button onclick="gerarChamado(13)">Mantenedores</button>
+        <button onclick="gerarChamado(14)">Laboratório</button>
+        <button onclick="gerarChamado(15)">Deslocamento</button>
+        <button onclick="gerarChamado(16)">Outros</button>
+    </ol>
+    
+    <button onclick="copyText()">Copy Text</button>
+            <script>
+              function copyText() {
+                var elemento = document.getElementById('chamado');
+                var texto = elemento.innerText;
+                navigator.clipboard.writeText(texto).then(function() {
+                  console.log('Texto copiado com sucesso!');
+                }, function(err) {
+                  console.error('Erro ao copiar texto:', err);
+                });
+              }
+            </script>
+
+<article>
+    <form class="principalForm" id="formulario">    
+        <p>
+            <div class="form">
+                <label class="formText" for="nchamado">Referente ao chamado:</label>
+                <input class="formText" type="text" id="nchamado" name="nchamado" placeholder="Ex: 2025000000000000 ">
+            </div>
+            
+            <div class="form">
+                <label class="formText" for="computador">Equipamentos:</label>
+                <input class="formText" type="text" id="computador" name="computador" placeholder="MD0000, MP0000, ...">
+            </div>
+            <div class="form">
+                <label class="formText" for="localizacao">Localização:</label>
+                <input class="formText" type="text" id="localizacao" name="localizacao" placeholder="SF - OSE - DGER - ... ">
+            </div>
+
+            <div class="form">
+                <label class="formText"for="solicitante">Solicitante:</label>
+                <input class="formText" type="text" id="solicitante" name="solicitante" placeholder="Nome do usuário">
+            </div>
+
+            <div class="form">
+                <label class="formText" for="aceite">Aceite:</label>
+                <input class="formText" type="text" id="aceite" name="aceite" placeholder="Nome do usuário aceite">
+            </div>
+            
+            <div class="form">
+                <label class="formText" for="ramal">Ramal:</label>
+                <input class="formText" type="text" id="ramal" name="ramal" placeholder="0000">
+            </div> 
+        </p>
+        
+        <span>
+            <button class="footerButon" onclick="clearAllInputs()">Apagar Tudo</button>
+        </span>    
+    </form>
+</article>    
+   
+                
+        <div class="result" id="chamado"></div>
+        <div class="result" id="resposta"></div>
+
+    
+
+
+   
+</body>
+<script src="principal/geradorChamado.js"></script>
+<script src="principal/clearallInputs.js"></script>
+<script src="Chamados/chamados.js"></script>
+<script src="Chamados/Respostas.js" ></script>
+<script src="principal/verificarCampos.js"></script>
+</html>
