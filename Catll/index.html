@@ -12,7 +12,7 @@
 
 <body>
 
-    <ol>
+    <div class="sideBar">
         <button class="form" onclick="gerarChamado(1)">Novo Equipamento</button>
         <button onclick="gerarChamado(2)">Instalação</button>
         <button onclick="gerarChamado(3)">Desinstalação</button>
@@ -29,22 +29,17 @@
         <button onclick="gerarChamado(14)">Laboratório</button>
         <button onclick="gerarChamado(15)">Deslocamento</button>
         <button onclick="gerarChamado(16)">Outros</button>
-    </ol>
-    
-    <button onclick="copyText()">Copy Text</button>
-            <script>
-              function copyText() {
-                var elemento = document.getElementById('chamado');
-                var texto = elemento.innerText;
-                navigator.clipboard.writeText(texto).then(function() {
-                  console.log('Texto copiado com sucesso!');
-                }, function(err) {
-                  console.error('Erro ao copiar texto:', err);
-                });
-              }
-            </script>
+    </div>
 
-<article>
+    <div class = "toolsBar">
+        <button onclick="copyCall()">Copiar Chamado</button>
+        <button onclick="copyResp()">Copiar Resposta</button>
+        <button onclick="clearAllInputs()">Apagar Tudo</button>
+    </div>
+        
+
+           
+
     <form class="principalForm" id="formulario">    
         <p>
             <div class="form">
@@ -75,17 +70,15 @@
                 <label class="formText" for="ramal">Ramal:</label>
                 <input class="formText" type="text" id="ramal" name="ramal" placeholder="0000">
             </div> 
+            <div class="result" id="chamado"></div>
+            <div class="result" id="resposta"></div>
         </p>
-        
-        <span>
-            <button class="footerButon" onclick="clearAllInputs()">Apagar Tudo</button>
-        </span>    
     </form>
-</article>    
+
+
    
                 
-        <div class="result" id="chamado"></div>
-        <div class="result" id="resposta"></div>
+
 
     
 
@@ -97,4 +90,5 @@
 <script src="Chamados/chamados.js"></script>
 <script src="Chamados/Respostas.js" ></script>
 <script src="principal/verificarCampos.js"></script>
+<script src="principal/copy.js"></script>
 </html>
