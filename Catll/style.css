@@ -1,95 +1,40 @@
-
-
-:root {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-  }
-  
-  body {
-    min-height: 100vh;
-    background: #F0F4FF;
-  }
-
-
-
-.sideBar {
-    position: fixed;
-    flex-basis: 20rem;
-    flex-grow: 1;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 120px;
-    display: flex;
-    flex-direction: column;
-    background: #e5ebf3;
-    padding: 20px 10px;
-    transition: all 0.4s ease;
-    border: 2px solid #ccc;
-    border-radius: 10px;
+:root{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.sidebar:hover {
-    width: 250px;
+.titleCatl{
+    text-align: center;
+    margin-bottom: 0;
 }
 
-.principalForm {
-    margin-left: 10%;
-    flex-basis: 20rem;
-    flex-grow: 1;
-    flex: content;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    background-color: #e5ebf3;
-    margin-top: 30px;
-    margin-left: 18%;
-    margin-right: 10%;
-    padding: 20px;
+.subtitleCatl {
+    text-align: center;
+    padding: 2px 1 2px 2px;
+    margin-top: 0;
 }
 
-.toolsBar{
-    right: 1%;
-    top: 1%;
+.headerBanner {
+    height: 72px;
+    padding: 10px 0 12px;
+    background-color: #00305c;
+    color: #FFF;
+    position: relative;
+    margin: 10px;
+
+}
+
+.headerBanner::after {
+    margin-top: 10px;
+    content: "";
     position: absolute;
-}
-
-
-
-input, textarea {
-    font-family: inherit;
-    border-color: rgb(129, 132, 134);
+    bottom: 0;
+    left: 0;
     width: 100%;
-    border: 1px ;
-    border-bottom: 1px solid;
-    outline: 2px;
-    font-size: 1rem;
-    padding: 10px 0;
-    background: transparent;
-    border-color: 0.3s;
+    height: 4px;
+    background: linear-gradient(to bottom, #00824a 50%, #fae042 50%);
 }
 
-button:hover {
-    background-color: #91c6ff;
-    transition-duration: 300ms;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    
-    
-}
+.optionsBar{
+    padding: 2px 2px 2px 2px ;
 
-button:active {
-    background-color: #0e4177;
-    box-shadow: 0 1px #8a8a8a;
-    transform: translateY(2px);
-}
-
-.result {
-    margin-top: 25px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    background-color: #e6f0ff;
-    margin-left: 8%;
-    margin-right: 8%;
-    padding: 10px;
 }

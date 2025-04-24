@@ -1,7 +1,7 @@
 
 
 
-function gerarChamado(opcao, verificarCampos) {
+function gerarChamado(opcao) {
 
     const formulario = document.getElementById('formulario');
     const inputs = formulario.querySelectorAll('input');
@@ -90,9 +90,6 @@ function gerarChamado(opcao, verificarCampos) {
             chamado = outros()
         break;
                     
-
-
-
 
         default:
             chamado = `Opção inválida`;

@@ -18,56 +18,13 @@ Funcionalidades a serem implementadas:
 - Deixar a interface mais intuitiva de mexer
 - Realizar a criação e configuração de um arquivo.js a parte dos chamados textos.
 
+- Criação de 2 abas de atendimento
+
+- Leitor de IDs para pegar o nome e patrimônio -> Função scaner (botão)
+
+
+Visual
+- Transição entre a mudança de tela de chamado nos botões
+
+
 Obs:  Eu estava pensando em fazer uma conexão com o robô do telegram. Assim eu conseguiria receber os meus chamados e acompanhamentos clicando em um botão na própria WEB.
-
-----
-
-function chamados(){
-
-    chamado = `➡️ Referente ao chamado: #${nchamado}
-            
-            • Solicito um novo equipamento para dar continuidade ao atendimento.
-            
-            💻 - Modelo do equipamento: ${computador}, ${monitor}
-            _____________________________________________
-        
-            📍 - Localização: ${localizacao}
-        
-            💬 - Solicitante: ${solicitante}
-            📞 - Ramal: ${ramal}
-            _____________________________________________
-            Central de Atendimentos Prodasen
-            
-            ⚙️ - Técnico: Davi de Souza 
-            📞 - Ramal do técnico: 2568`;
-
-
-            chamado_2 = `➡️ Referente ao chamado: #${nchamado}
-            
-            • Solicito a instalação de equipamentos.
-            
-            💻 - Equipamento(s): ${computador}, ${monitor}
-            _____________________________________________
-            
-            📍 - Localização: ${localizacao}
-        
-            💬 - Solicitante: ${solicitante}
-            📞 - Ramal: ${ramal}`;
-
-            resposta = `✔️ O equipamento informado no item de configuração do chamado, foi instalado conforme solicitado.
-            _____________________________________________
-            
-            📍 - Localização: ${localizacao}
-            
-            💬 - Solicitante: ${solicitante}
-            ${aceite ? `✔️ - Aceite: ${aceite}` : ''}
-            📞 - Ramal: ${ramal}
-            
-            _____________________________________________
-            Central de Atendimentos Prodasen
-            
-            ⚙️ - Técnico: Davi de Souza 
-            📞 - Ramal do técnico: 2568`;
-    
-
-}
