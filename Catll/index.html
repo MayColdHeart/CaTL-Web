@@ -16,7 +16,7 @@
 
 <body>
 
-    <div class="optionsBar">
+    <div class="buttonsBar">
         <button class="formButton" onclick="gerarChamado(1)">Novo Equipamento</button>
         <button class="formButton" onclick="gerarChamado(2)">Instalação</button>
         <button class="formButton" onclick="gerarChamado(3)">Desinstalação</button>
@@ -43,32 +43,22 @@
     <form class="containerForm" id="formulario">    
         <p>
             <div class="form">
-                <label class="formText" for="nchamado">Referente ao chamado:</label>
-                <input class="formText" type="text" id="nchamado" name="nchamado" placeholder="Ex: 2025000000000000 ">
-            </div>
-            
-            <div class="form">
-                <label class="formText" for="computador">Equipamentos:</label>
-                <input class="formText" type="text" id="computador" name="computador" placeholder="MD0000, MP0000, ...">
+                <input class="formText" type="text" id="nchamado" name="nchamado" placeholder="Referente ao chamado">
             </div>
             <div class="form">
-                <label class="formText" for="localizacao">Localização:</label>
-                <input class="formText" type="text" id="localizacao" name="localizacao" placeholder="SF - OSE - DGER - ... ">
+                <input class="formText" type="text" id="computador" name="computador" placeholder="Equipamentos">
             </div>
-
             <div class="form">
-                <label class="formText"for="solicitante">Solicitante:</label>
-                <input class="formText" type="text" id="solicitante" name="solicitante" placeholder="Nome do usuário">
+                <input class="formText" type="text" id="localizacao" name="localizacao" placeholder="Localização">
             </div>
-
             <div class="form">
-                <label class="formText" for="aceite">Aceite:</label>
-                <input class="formText" type="text" id="aceite" name="aceite" placeholder="Nome do usuário aceite">
+                <input class="formText" type="text" id="solicitante" name="solicitante" placeholder="Solicitante">
             </div>
-            
             <div class="form">
-                <label class="formText" for="ramal">Ramal:</label>
-                <input class="formText" type="text" id="ramal" name="ramal" placeholder="0000">
+                <input class="formText" type="text" id="aceite" name="aceite" placeholder="Aceite">
+            </div>
+            <div class="form">
+                <input class="formText" type="text" id="ramal" name="ramal" placeholder="Ramal">
             </div> 
         </p>
     </form>
@@ -77,15 +67,30 @@
  
 
     <div class = "toolsBar">
-        <button class="optionButton" onclick="copyCall()">Copiar Chamado</button>
-        <button class="optionButton" onclick="copyResp()">Copiar Resposta</button>
-        <button class="optionButton" onclick="clearAllInputs()">Apagar Tudo</button>
+        <button onclick="copyCall()">
+            <img src="/Catll/assets/edit.png" style="width: 20px; height: 20px;">
+            
+        </button>
+        
+        <button onclick="copyResp()">
+            <img src="/Catll/assets/check.png" style="width: 20px; height: 20px;">
+            
+        </button>
+
+
+
+        <button onclick="clearAllInputs()"><img src="/Catll/assets/delete.png" style="width: 20px; height: 20px;"></button>
     </div>       
 
-<div class ='outputText'>
+<div class ='outputTextCham'>
     <div class="result" id="chamado"></div>
+</div>
+
+<div class ='outputTextResp'>
     <div class="result" id="resposta"></div>
 </div>
+
+
 
     
 

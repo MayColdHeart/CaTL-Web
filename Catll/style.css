@@ -34,7 +34,43 @@
     background: linear-gradient(to bottom, #00824a 50%, #fae042 50%);
 }
 
-.optionsBar{
+.buttonsBar{
     padding: 2px 2px 2px 2px ;
+    margin: 30px;
+    width: 50%;
+    
 
+}
+
+.formButton{
+    padding: 1;
+    width: 32%;
+    margin: 2px;
+}
+
+.formText{
+    width: 52%;
+}
+
+
+.containerForm{
+    padding: 1;
+    margin: 2%;
+
+}
+
+.toolsBar{
+    margin-left: 42%;
+}
+
+.outputTextCham{
+    padding: 1;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.outputTextResp{
+    padding: 1;
+    margin-top: 2%;
+    margin-left: 2%;
 }
