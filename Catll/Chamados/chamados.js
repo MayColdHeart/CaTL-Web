@@ -1,23 +1,25 @@
 
 function obterDados(){
     const nchamado = document.getElementById('nchamado').value;
-    const computador = document.getElementById('computador').value;
-    const monitor = document.getElementById('monitor').value;
+    const eqEspecif = document.getElementById('eqEspecif').value;
+    const itemConf = document.getElementById('itemConf').value;
     const localizacao = document.getElementById('localizacao').value;
     const solicitante = document.getElementById('solicitante').value;
     const ramal = document.getElementById('ramal').value;
     
-    return {nchamado, computador, monitor, localizacao, solicitante, ramal};
+    return {nchamado, itemConf, eqEspecif, localizacao, solicitante, ramal};
 }
 
 function novoEquipamento() {
-    const { nchamado, computador, localizacao, solicitante, ramal } = obterDados();
+    const { nchamado, itemConf, localizacao, solicitante, ramal } = obterDados();
     
     return `➡️ Referente ao chamado: #${nchamado}
             
             • Solicito um novo equipamento para dar continuidade ao atendimento.
+
+            - Novo equipamento:
             
-            💻 - Modelo do equipamento: ${computador}
+            📦 - Item de Configuração: ${itemConf}
             _____________________________________________
         
             📍 - Localização: ${localizacao}
@@ -28,18 +30,18 @@ function novoEquipamento() {
             Central de Atendimentos Prodasen
             
             ⚙️ - Técnico: Davi de Souza 
-            📞 - Ramal do técnico: 2568`;
+            📞 - Ramal: 2568`;
 }
 
 function instalaEquipamento() {
-    const { nchamado, computador, localizacao, solicitante, ramal } = obterDados();
+    const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
 
 
     return `➡️ Referente ao chamado: #${nchamado}
             
             • Solicito a instalação de equipamentos.
             
-            💻 - Equipamento(s): ${computador}
+            💻 - Equipamento: ${eqEspecif}
             _____________________________________________
             
             📍 - Localização: ${localizacao}
@@ -49,13 +51,13 @@ function instalaEquipamento() {
 }
 
 function desinstalaEquipamento(){
-    const { nchamado, computador, localizacao, solicitante, ramal } = obterDados();
+    const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
 
     return `➡️ Referente ao chamado: #${nchamado}
             
             • Solicito a desinstalação de equipamentos.
             
-            💻 - Equipamento(s): ${computador}
+            💻 - Equipamento: ${eqEspecif}
             _____________________________________________
             
             📍 - Localização: ${localizacao}
@@ -65,13 +67,13 @@ function desinstalaEquipamento(){
 }
 
 function remanejamentoIntern(){
-    const { nchamado, computador, localizacao, solicitante, ramal } = obterDados();
+    const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
 
     return `➡️ Referente ao chamado: #${nchamado}
             
             • Solicito o remanejamento interno de equipamentos.
             
-            💻 - Equipamento(s): ${computador}
+            💻 - Equipamento: ${eqEspecif}
             _____________________________________________
             
             📍 - Localização: ${localizacao}
@@ -81,13 +83,13 @@ function remanejamentoIntern(){
 }
 
 function remanejamentoExtern(){
-    const { nchamado, computador, localizacao, solicitante, ramal } = obterDados();
+    const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
 
     return `➡️ Referente ao chamado: #${nchamado}
                 
             • Solicito o remanejamento externo de equipamentos.
                 
-            💻 - Equipamento(s): ${computador}
+            💻 - Equipamento: ${eqEspecif}
             _____________________________________________
             
             📍 - Localização: ${localizacao}
@@ -97,13 +99,13 @@ function remanejamentoExtern(){
 }
 
 function attCadastral(){
-    const { nchamado, computador, solicitante, ramal, aceite } = obterDados();
+    const { nchamado, eqEspecif, itemConf, solicitante, ramal, aceite } = obterDados();
 
     return `➡️ Referente ao chamado: #${nchamado}
 
-            🔄 Solicito atualização cadastral de equipamentos.
+            🔄 Solicito atualização cadastral do equipamento ${eqEspecif}.
 
-            💻 Equipamento: ${computador}
+            📦 - Item de Configuração: ${itemConf}
 
             ⬅️ Órgão de Origem: 
             • Unidade administrativa: 
@@ -123,10 +125,9 @@ function attCadastral(){
             Central de Atendimentos Prodasen
 
             ⚙️ - Técnico: Davi de Souza 
-            📞 - Ramal do técnico: 2568
+            📞 - Ramal: 2568
 
-
-            ---
+            --- 
 
             ⬅️ Órgão de Origem: SF - OSE - DGER - PRDSTI - COATEN - SAEQUI - SEAEQ
             • Unidade administrativa: SETOR DE ARMAZENAMENTO DE EQUIPAMENTOS DA SAEQUI (GALPÃO)
@@ -137,14 +138,16 @@ function attCadastral(){
             • Localização de destino do equipamento: BLOCO 16 - GALPÃO I`;
 }
 
+//Linha 132 - 139 -> precisa aparecer como resposta
+
 function cabosVideo(){
-    const { nchamado, computador, localizacao, solicitante, ramal } = obterDados();
+    const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
     
     return `➡️ Referente ao chamado: #${nchamado}
             
             • Solicito um Kit de cabos de vídeo para dar continuidade ao atendimento
             
-            💻 - Equipamento(s): ${computador}
+            💻 - Equipamento: ${eqEspecif}
             ____________________________________________
             
             📍 - Localização: ${localizacao}
@@ -159,13 +162,13 @@ function cabosVideo(){
 }
 
 function solictMouse(){
-    const { nchamado, computador, localizacao, solicitante, ramal } = obterDados();
+    const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
 
     return `➡️ Referente ao chamado: #${nchamado}
             
             • Solicito um mouse para dar continuidade ao atendimento
             
-            💻 - Equipamento(s): ${computador}
+            💻 - Equipamento: ${eqEspecif}
             ____________________________________________
             
             📍 - Localização: ${localizacao}
@@ -180,13 +183,13 @@ function solictMouse(){
 }
 
 function solictTecld(){
-    const { nchamado, computador, localizacao, solicitante, ramal } = obterDados();
+    const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
 
     return `➡️ Referente ao chamado: #${nchamado}
             
-            • Solicito um teclado para dar continuidade ao atendimento
+            • Solicito um teclado para dar continuidade ao atendimento.
             
-            💻 - Equipamento(s): ${computador}
+            💻 - Equipamento: ${eqEspecif}
             ____________________________________________
             
             📍 - Localização: ${localizacao}
@@ -201,13 +204,13 @@ function solictTecld(){
 }
 
 function solicitOrgCabos(){
-    const { nchamado, computador, localizacao, solicitante, ramal } = obterDados();
+    const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
 
     return `➡️ Referente ao chamado: #${nchamado}
                 
             • Solicito um organizador de cabos para dar continuidade ao atendimento
         
-            💻 - Equipamento(s): ${computador}
+            💻 - Equipamento: ${eqEspecif}
             ____________________________________________
         
             📍 - Localização: ${localizacao}
@@ -222,13 +225,12 @@ function solicitOrgCabos(){
 }
 
 function habPontRede(){
-    const { nchamado, computador, localizacao, solicitante, ramal } = obterDados();
+    const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
     
     return `➡️ Referente ao chamado: #${nchamado}
                     
-            • Solicito a habilitação do ponto de rede no local para o seguinte equipamento.
-                    
-            💻 - Equipamento: ${computador}
+            • Solicito a habilitação do ponto de rede no local para o equipamento "${eqEspecif}".
+        
             ____________________________________________
                     
             📍 - Localização: ${localizacao}
@@ -243,13 +245,12 @@ function habPontRede(){
 }
 
 function caboRede(){
-    const { nchamado, computador, localizacao, solicitante, ramal } = obterDados();
+    const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
     
     return `➡️ Referente ao chamado: #${nchamado}
                     
-            • Solicito um cabo de rede de " " no local para o seguinte equipamento.
-                    
-            💻 - Equipamento: ${computador}
+            • Solicito a disponibilidade de um cabo de rede no local para o equipamento "${eqEspecif}".
+
             ____________________________________________
                     
             📍 - Localização: ${localizacao}
@@ -264,13 +265,14 @@ function caboRede(){
 }
 
 function mantenedores(){
-    const { nchamado, computador, localizacao, solicitante, ramal, aceite } = obterDados();
+    const { nchamado, eqEspecif, localizacao, solicitante, ramal, aceite } = obterDados();
 
     return `➡️ Referente ao chamado: #${nchamado}
                         
-            💬 O cabo DVI/HDMI está danificado. Dessa forma, foi realizada a sua substituição. O cabo danificado foi recolhido e entregue ao galpão do SAEQUI
+            💬 
                         
-            💻 - Equipamento: ${computador}
+            💻 - Equipamento: ${eqEspecif}
+            #️⃣ - Número de Série:
             ____________________________________________
                         
             📍 - Localização: ${localizacao}
@@ -285,14 +287,14 @@ function mantenedores(){
 }
 
 function laboratorio(){
-    const { computador, localizacao, solicitante, ramal, aceite } = obterDados();
+    const { eqEspecif, itemConf, localizacao, solicitante, ramal, aceite } = obterDados();
+    
+    return `• O equipamento "${eqEspecif}" foi recolhido do local e entregue ao laboratório. 
 
-    return `• O seguinte equipamento informado abaixo, foi entregue ao laboratório. 
-            
-            💻 - Equipamento(s): ${computador}
-            
-            ⚠️
+            ⚠️         
 
+            📦 - Item de Configuração: ${itemConf}
+            
            _____________________________________________
 
            📍 - Localização: ${localizacao}
@@ -309,9 +311,33 @@ function laboratorio(){
 
 }
 
-function deslocamento(){
 
-    return `➡️ Técnico indo ao local para verificar o monitor.
+function outros(){
+    const { eqEspecif, itemConf, localizacao, solicitante, ramal, aceite } = obterDados();
+
+    return  `•  
+
+            💻 - Equipamento: ${eqEspecif}
+        
+            📦 - Item de Configuração: ${itemConf}
+
+            _____________________________________________
+
+            📍 - Localização:${localizacao}
+
+            💬 - Solicitante: ${solicitante}
+            ✔️ - Aceite do recolhimento: ${aceite}
+            📞 - Ramal: ${ramal} 
+
+            _____________________________________________
+            Central de Atendimentos Prodasen
+
+            ⚙️ - Técnico: Davi de Souza 
+            📞 - Ramal do técnico: 2568`;
+}
+
+function deslocamento(){
+    return `➡️ Técnico indo ao local para verificar o(s) equipamento(s).
             
             _____________________________________________
             Central de Atendimentos Prodasen
@@ -321,13 +347,13 @@ function deslocamento(){
 
 
 
-           ➡️ Técnico indo ao local para verificar o computador.
+            ➡️ Técnico indo ao local para verificar os periféricos.
 
-           _____________________________________________
-           Central de Atendimentos Prodasen
-
-           ⚙️ - Técnico: Davi de Souza 
-           📞 - Ramal do técnico: 2568
+            _____________________________________________
+            Central de Atendimentos Prodasen
+          
+            ⚙️ - Técnico: Davi de Souza
+            📞 - Ramal do técnico: 2568
 
 
 
@@ -361,48 +387,11 @@ function deslocamento(){
 
 
 
-          ➡️ Técnico indo ao local para organizar os cabos dos equipamentos
+          ➡️ Técnico indo ao local para organizar os cabos.
           
           _____________________________________________
           Central de Atendimentos Prodasen
           
           ⚙️ - Técnico: Davi de Souza
-          📞 - Ramal do técnico: 2568
-          
-          
-
-          ➡️ Técnico indo ao local para verificar os periféricos.
-
-          _____________________________________________
-          Central de Atendimentos Prodasen
-          
-          ⚙️ - Técnico: Davi de Souza
-          📞 - Ramal do técnico: 2568
-          `;
-
-}
-
-function outros(){
-    const { nchamado, computador, localizacao, solicitante, ramal, aceite } = obterDados();
-
-    return  `•  
-            
-        💻 - Equipamento(s): ${computador}
-    
-        ⚠️
-
-        _____________________________________________
-
-        📍 - Localização:${localizacao}
-
-        💬 - Solicitante: ${solicitante}
-        ✔️ - Aceite do recolhimento: ${aceite}
-        📞 - Ramal: ${ramal} 
-
-        _____________________________________________
-        Central de Atendimentos Prodasen
-
-        ⚙️ - Técnico: Davi de Souza 
-        📞 - Ramal do técnico: 2568`;
-
-}
+          📞 - Ramal do técnico: 2568`;
+        }
