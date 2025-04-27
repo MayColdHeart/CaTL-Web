@@ -16,30 +16,6 @@
 
 <body>
 
-    <div class="buttonsBar">
-        <button class="formButton" onclick="gerarChamado(1)">Novo Equipamento</button>
-        <button class="formButton" onclick="gerarChamado(2)">Instalação</button>
-        <button class="formButton" onclick="gerarChamado(3)">Desinstalação</button>
-        <button class="formButton" onclick="gerarChamado(4)">Remanejamento Interno</button>
-        <button class="formButton" onclick="gerarChamado(5)">Remanejamento Externo</button>
-        <button class="formButton" onclick="gerarChamado(6)">Atualização Cadastral</button>
-        <button class="formButton" onclick="gerarChamado(7)">Periféricos (vídeo)</button>
-        <button class="formButton" onclick="gerarChamado(8)">Periféricos (Mouse)</button>
-        <button class="formButton" onclick="gerarChamado(9)">Periféricos (Teclado)</button>
-        <button class="formButton" onclick="gerarChamado(10)">Organizadores de Cabos</button>
-        <button class="formButton" onclick="gerarChamado(11)">Habilitar Pontos de Rede</button>
-        <button class="formButton" onclick="gerarChamado(12)">Cabos de Rede</button>
-        <button class="formButton" onclick="gerarChamado(13)">Mantenedores</button>
-        <button class="formButton" onclick="gerarChamado(14)">Laboratório</button>
-        <button class="formButton" onclick="gerarChamado(15)">Deslocamento</button>
-        <button class="formButton" onclick="gerarChamado(16)">Outros</button>
-    </div>
-
-    
-        
-
-           
-
     <form class="containerForm" id="formulario">    
         <p>
             <div class="form">
@@ -66,7 +42,25 @@
         </p>
     </form>
     
-    
+    <label>Tipo de Chamado:</label>
+    <select id="tipoChamadoSelect" onclick="escolheTipoCham()" onkeypress="escolheTipoCham()">
+        <option value="novoEquipamento">Novo Equipamento</option>
+        <option value="instalacao">Instalação</option>
+        <option value="desinstala">Desinstalação</option>
+        <option value="remanejInt">Remanejamento Interno</option>
+        <option value="remanejExt">Remanejamento Externo</option>
+        <option value="attCadastral">Atualização Cadastral</option>
+        <option value="perifVideo">Periféricos (vídeo)</option>
+        <option value="perifTeclado">Periféricos (Teclado)</option>
+        <option value="perifMouse">Periféricos (Mouse)</option>
+        <option value="orgCabos">Organizadores de Cabos</option>
+        <option value="habRede">Habilitar Pontos de Rede</option>
+        <option value="cabRede">Cabos de Rede</option>
+        <option value="mantenedor">Mantenedores</option>
+        <option value="lab">Laboratório</option>
+        <option value="desloc">Deslocamento</option>
+        <option value="outros">Outros</option>
+    </select>
  
 
     <div class = "toolsBar">
@@ -93,16 +87,11 @@
     <div class="result" id="resposta"></div>
 </div>
 
-
-
-    
-
-
    
 </body>
 <script src="Chamados/chamados.js"></script>
 <script src="Chamados/Respostas.js"></script>
 <script src="Functions/clearallInputs.js"></script>
 <script src="Functions/copy.js" ></script>
-<script src="Functions/geradorChamado.js"></script>
+<script src="Functions/geradorChamados.js"></script>
 </html>

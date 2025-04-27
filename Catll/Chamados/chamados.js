@@ -33,7 +33,7 @@ function novoEquipamento() {
             📞 - Ramal: 2568`;
 }
 
-function instalaEquipamento() {
+function instalaEquip() {
     const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
 
 
@@ -50,7 +50,7 @@ function instalaEquipamento() {
             📞 - Ramal: ${ramal}`;
 }
 
-function desinstalaEquipamento(){
+function desinstalaEquip(){
     const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
 
     return `➡️ Referente ao chamado: #${nchamado}
@@ -66,7 +66,7 @@ function desinstalaEquipamento(){
             📞 - Ramal: ${ramal}`;
 }
 
-function remanejamentoIntern(){
+function remanInter(){
     const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
 
     return `➡️ Referente ao chamado: #${nchamado}
@@ -82,7 +82,7 @@ function remanejamentoIntern(){
             📞 - Ramal: ${ramal}`; 
 }
 
-function remanejamentoExtern(){
+function remanExtr(){
     const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
 
     return `➡️ Referente ao chamado: #${nchamado}
@@ -203,7 +203,7 @@ function solictTecld(){
             📞 - Ramal do técnico: 2568`;
 }
 
-function solicitOrgCabos(){
+function OrgCabos(){
     const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
 
     return `➡️ Referente ao chamado: #${nchamado}
@@ -395,3 +395,5 @@ function deslocamento(){
           ⚙️ - Técnico: Davi de Souza
           📞 - Ramal do técnico: 2568`;
         }
+
+

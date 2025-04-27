@@ -12,7 +12,7 @@ function obterDados(){
     return {nchamado, itemConf, eqEspecif, localizacao, solicitante, ramal, aceite};
 }
 
-function instalaEquipamentoResp() {
+function instalaResp() {
     const { localizacao, solicitante, ramal, aceite } = obterDados();
 
 
@@ -32,7 +32,7 @@ function instalaEquipamentoResp() {
             📞 - Ramal: 2568`;
 }
 
-function desinstalaEquipamentoResp(){
+function desinstalaResp(){
     const { localizacao, solicitante, ramal, aceite } = obterDados();
 
     return `✔️ O equipamento informado no item de configuração do chamado, foi desinstalado conforme solicitado.
@@ -51,7 +51,7 @@ function desinstalaEquipamentoResp(){
             📞 - Ramal: 2568`;
 }
 
-function remanejamentoInterResp(){
+function remanInterResp(){
     const { itemConf, localizacao, solicitante, ramal, aceite } = obterDados();
 
     return `✔️ Os equipamentos foram remanejados para os locais indicados pelo usuário conforme foi solicitado.
@@ -77,7 +77,7 @@ function remanejamentoInterResp(){
 }
 
 //Melhorar a implementação de remanejamento. Planejar melhor isso
-function remanejamentoExtResp(){
+function remanExtrResp(){
     const { itemConf, localizacao, solicitante, ramal, aceite } = obterDados();
 
     return `✔️ Os equipamentos foram remanejados para o local indicado pelo usuário conforme foi solicitado.
@@ -138,7 +138,7 @@ function cabosVideoResp(){
 
 }
 
-function solictMouseResp(){
+function MouseResp(){
     const { localizacao, solicitante, ramal, aceite } = obterDados();
 
     return `✔️ Realizado a troca de mouse da CPU. 
@@ -159,7 +159,7 @@ function solictMouseResp(){
             📞 - Ramal do técnico: 2568`;
 }
 
-function solictTecldResp(){
+function TecldResp(){
     const { localizacao, solicitante, ramal, aceite } = obterDados();
 
     return `✔️ Realizado a troca de teclado da CPU.
@@ -181,7 +181,7 @@ function solictTecldResp(){
 
 }
 
-function solicitOrgCabosResp(){
+function OrgCabosResp(){
     const { localizacao, solicitante, ramal, aceite } = obterDados();
 
     return `✔️ Realizado a organização de cabos dos equipamentos informados no item de configuração.
