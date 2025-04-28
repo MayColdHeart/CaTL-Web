@@ -26,6 +26,7 @@ function novoEquipamento() {
         
             💬 - Solicitante: ${solicitante}
             📞 - Ramal: ${ramal}
+
             _____________________________________________
             Central de Atendimentos Prodasen
             
@@ -108,12 +109,12 @@ function attCadastral(){
             📦 - Item de Configuração: ${itemConf}
 
             ⬅️ Órgão de Origem: 
-            • Unidade administrativa: 
-            • Localização de origem do equipamento: 
+            • Unidade administrativa: 
+            • Localização de origem do equipamento: 
 
             ➡️ Órgão de Destino: 
-            • Unidade administrativa: 
-            • Localização de destino do equipamento: 
+            • Unidade administrativa: 
+            • Localização de destino do equipamento: 
 
             _____________________________________________
 
@@ -130,12 +131,12 @@ function attCadastral(){
             --- 
 
             ⬅️ Órgão de Origem: SF - OSE - DGER - PRDSTI - COATEN - SAEQUI - SEAEQ
-            • Unidade administrativa: SETOR DE ARMAZENAMENTO DE EQUIPAMENTOS DA SAEQUI (GALPÃO)
-            • Localização de origem do equipamento: BLOCO 16 - GALPÃO I
+            • Unidade administrativa: SETOR DE ARMAZENAMENTO DE EQUIPAMENTOS DA SAEQUI (GALPÃO)
+            • Localização de origem do equipamento: BLOCO 16 - GALPÃO I
 
             ➡️ Órgão de Destino: SF - OSE - DGER - PRDSTI - COATEN - SAEQUI - SEAEQ
-            • Unidade administrativa: SETOR DE ARMAZENAMENTO DE EQUIPAMENTOS DA SAEQUI (GALPÃO)
-            • Localização de destino do equipamento: BLOCO 16 - GALPÃO I`;
+            • Unidade administrativa: SETOR DE ARMAZENAMENTO DE EQUIPAMENTOS DA SAEQUI (GALPÃO)
+            • Localização de destino do equipamento: BLOCO 16 - GALPÃO I`;
 }
 
 //Linha 132 - 139 -> precisa aparecer como resposta
@@ -154,6 +155,7 @@ function cabosVideo(){
             
             💬 - Solicitante: ${solicitante}
             📞 - Ramal: ${ramal}
+
             _____________________________________________
             Central de Atendimentos Prodasen
             
@@ -175,6 +177,7 @@ function solictMouse(){
             
             💬 - Solicitante: ${solicitante}
             📞 - Ramal: ${ramal}
+
             _____________________________________________
             Central de Atendimentos Prodasen
             
@@ -196,6 +199,7 @@ function solictTecld(){
             
             💬 - Solicitante: ${solicitante}
             📞 - Ramal: ${ramal}
+
             _____________________________________________
             Central de Atendimentos Prodasen
             
@@ -217,6 +221,7 @@ function OrgCabos(){
         
             💬 - Solicitante: ${solicitante}
             📞 - Ramal: ${ramal}
+
             _____________________________________________
             Central de Atendimentos Prodasen
         
@@ -237,6 +242,7 @@ function habPontRede(){
                     
             💬 - Solicitante: ${solicitante}
             📞 - Ramal: ${ramal}
+
             _____________________________________________
             Central de Atendimentos Prodasen
                     
@@ -257,6 +263,7 @@ function caboRede(){
         
             💬 - Solicitante: ${solicitante}
             📞 - Ramal: ${ramal}
+
             _____________________________________________
             Central de Atendimentos Prodasen
                     
@@ -279,6 +286,7 @@ function mantenedores(){
             💬 - Solicitante: ${solicitante}
             ${aceite ? `✔️ - Aceite: ${aceite}` : ''}     
             📞 - Ramal: ${ramal}
+
             ____________________________________________
             Central de Atendimentos Prodasen
                         
@@ -337,63 +345,24 @@ function outros(){
 }
 
 function deslocamento(){
-    return `➡️ Técnico indo ao local para verificar o(s) equipamento(s).
+    const { eqEspecif, itemConf, localizacao, solicitante, ramal, aceite } = obterDados();
+    return `➡️ Técnico indo ao local
             
             _____________________________________________
             Central de Atendimentos Prodasen
            
            ⚙️ - Técnico: Davi de Souza 
            📞 - Ramal do técnico: 2568
-
-
-
-            ➡️ Técnico indo ao local para verificar os periféricos.
-
-            _____________________________________________
-            Central de Atendimentos Prodasen
-          
-            ⚙️ - Técnico: Davi de Souza
-            📞 - Ramal do técnico: 2568
-
-
-
-           ➡️ Técnico indo ao local para recolher o equipamento. 
            
-           _____________________________________________
-           Central de Atendimentos Prodasen
-           
-           ⚙️ - Técnico: Davi de Souza   
-           📞 - Ramal do técnico: 2568
 
-
-
-           ➡️ Indo ao local para realizar a devolução do equipamento. 
-  
-           _____________________________________________
-           Central de Atendimentos Prodasen  
-  
-          ⚙️ - Técnico: Davi de Souza   
-          📞 - Ramal do técnico: 2568
-
-
-
-          ➡️ Técnico indo ao local para realizar o remanejamento.
-          
-          _______________________________________________
-          Central de Atendimentos Prodasen
-          
-          ⚙️ - Técnico: Davi de Souza
-          📞 - Ramal do técnico: 2568
-
-
-
-          ➡️ Técnico indo ao local para organizar os cabos.
-          
-          _____________________________________________
-          Central de Atendimentos Prodasen
-          
-          ⚙️ - Técnico: Davi de Souza
-          📞 - Ramal do técnico: 2568`;
+           ___________________________________________
+           💻 - Equipamento: ${eqEspecif}
+           📦 - Item de Configuração: ${itemConf}
+        
+           📍 - Localização:${localizacao}
+        
+           💬 - Solicitante: ${solicitante}
+           📞 - Ramal: ${ramal}`;
         }
 
 

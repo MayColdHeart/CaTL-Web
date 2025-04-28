@@ -1,8 +1,13 @@
 :root{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
-.titleCatl{
+body{
+    background-color: #131414;
+}
+
+.titleCatl {
     text-align: center;
     margin-bottom: 0;
 }
@@ -20,7 +25,6 @@
     color: #FFF;
     position: relative;
     margin: 10px;
-
 }
 
 .headerBanner::after {
@@ -34,43 +38,53 @@
     background: linear-gradient(to bottom, #00824a 50%, #fae042 50%);
 }
 
-.buttonsBar{
-    margin-top: 15px;
-    margin-bottom: 10px;
+
+
+
+.form{
+    margin: 10px;
+}
+
+
+/* input */
+.formText{ 
+    width: 90%;
+    padding: 0.5rem;
+    border: 2px solid #5c5c5c;
+    border-radius: 30px;
+    outline: none;
+    background: transparent;
+    color: #FFF;
+}
+
+
+.tipoCham{
+    color: #FFF;
+    
+}
+
+#tipoChamadoSelect{
+    background-color: #121314;
+    color: #FFF;
+    border-radius: 30px;
+    outline: none;
+    padding: 0.3rem;
+    border: 2px solid #5c5c5c;
+}
+
+.toolsBar {
     display: flex;
     flex-direction: column;
-    width: 70%;
-}
-
-.formButton{
-    padding: 1;
-    width: 32%;
-    margin: 2px;
-}
-
-.formText{
-    width: 52%;
+    right: 0;
+    margin: 1px;
+    background-color: #1c1f2281;
+    position: fixed;
 }
 
 
-.containerForm{
-    padding: 1;
-    margin: 2%;
-
+.toolButton {
+    background-color: #e9e9e98e;
 }
 
-.toolsBar{
-    margin-left: 42%;
-}
 
-.outputTextCham{
-    padding: 1;
-    margin-top: 2%;
-    margin-left: 2%;
-}
 
-.outputTextResp{
-    padding: 1;
-    margin-top: 2%;
-    margin-left: 2%;
-}

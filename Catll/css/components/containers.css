@@ -1,0 +1,35 @@
+.container{
+    width: 60%;
+    background-color: #1c1f22;
+    padding: 10px;
+    margin-top: 2%;
+    margin-left: 2%;
+    left: 0;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #2c2c2c;
+}
+
+.containerCh {
+    width: 60%;
+    color: #FFF;
+    background-color: #1c1f22;
+    padding: 10px;
+    margin-top: 2%;
+    margin-left: 2%;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #2c2c2c;
+}
+
+.containerRsp {
+    width: 60%;
+    color: #FFF;
+    background-color: #1c1f22;
+    padding: 10px;
+    margin-top: 2%;
+    margin-left: 2%;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #2c2c2c;
+}

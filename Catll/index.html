@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components/containers.css">
 </head>
 
 <header>
@@ -16,76 +17,84 @@
 
 <body>
 
-    <form class="containerForm" id="formulario">    
-        <p>
-            <div class="form">
-                <input class="formText" type="text" id="nchamado" name="nchamado" placeholder="Referente ao chamado">
-            </div>
-            <div class="form">
-                <input class="formText" type="text" id="eqEspecif" name="eqEspecif" placeholder="Equipamento específico">
-            </div>
-            <div class="form">
-                <input class="formText" type="text" id="itemConf" name="itemConf" placeholder="Item de configuração">
-            </div>
-            <div class="form">
-                <input class="formText" type="text" id="localizacao" name="localizacao" placeholder="Localização">
-            </div>
-            <div class="form">
-                <input class="formText" type="text" id="solicitante" name="solicitante" placeholder="Solicitante">
-            </div>
-            <div class="form">
-                <input class="formText" type="text" id="aceite" name="aceite" placeholder="Aceite">
-            </div>
-            <div class="form">
-                <input class="formText" type="text" id="ramal" name="ramal" placeholder="Ramal">
-            </div> 
-        </p>
-    </form>
+    <div class="container">
+        <form class="formContent" id="formulario">    
+            <p>
+                <div class="form">
+                    <input class="formText" type="text" id="nchamado" name="nchamado" placeholder="Referente ao chamado">
+                </div>
+                <div class="form">
+                    <input class="formText" type="text" id="eqEspecif" name="eqEspecif" placeholder="Equipamento específico">
+                </div>
+                <div class="form">
+                    <input class="formText" type="text" id="itemConf" name="itemConf" placeholder="Item de configuração">
+                </div>
+                <div class="form">
+                    <input class="formText" type="text" id="localizacao" name="localizacao" placeholder="Localização">
+                </div>
+                <div class="form">
+                    <input class="formText" type="text" id="solicitante" name="solicitante" placeholder="Solicitante">
+                </div>
+                <div class="form">
+                    <input class="formText" type="text" id="aceite" name="aceite" placeholder="Aceite">
+                </div>
+                <div class="form">
+                    <input class="formText" type="text" id="ramal" name="ramal" placeholder="Ramal">
+                </div> 
+            </p>
+        </form>
+        
+        <hr>
+        
+        <label class="tipoCham">Tipo de Chamado:</label>
+
+        <select id="tipoChamadoSelect" onclick="escolheTipoCham()" onkeypress="escolheTipoCham()">
+            <option value="novoEquipamento">Novo Equipamento</option>
+            <option value="instalacao">Instalação</option>
+            <option value="desinstala">Desinstalação</option>
+            <option value="remanejInt">Remanejamento Interno</option>
+            <option value="remanejExt">Remanejamento Externo</option>
+            <option value="attCadastral">Atualização Cadastral</option>
+            <option value="perifVideo">Periféricos (vídeo)</option>
+            <option value="perifTeclado">Periféricos (Teclado)</option>
+            <option value="perifMouse">Periféricos (Mouse)</option>
+            <option value="orgCabos">Organizadores de Cabos</option>
+            <option value="habRede">Habilitar Pontos de Rede</option>
+            <option value="cabRede">Cabos de Rede</option>
+            <option value="mantenedor">Mantenedores</option>
+            <option value="lab">Laboratório</option>
+            <option value="desloc">Deslocamento</option>
+            <option value="outros">Outros</option>
+        </select>
+     
     
-    <label>Tipo de Chamado:</label>
-    <select id="tipoChamadoSelect" onclick="escolheTipoCham()" onkeypress="escolheTipoCham()">
-        <option value="novoEquipamento">Novo Equipamento</option>
-        <option value="instalacao">Instalação</option>
-        <option value="desinstala">Desinstalação</option>
-        <option value="remanejInt">Remanejamento Interno</option>
-        <option value="remanejExt">Remanejamento Externo</option>
-        <option value="attCadastral">Atualização Cadastral</option>
-        <option value="perifVideo">Periféricos (vídeo)</option>
-        <option value="perifTeclado">Periféricos (Teclado)</option>
-        <option value="perifMouse">Periféricos (Mouse)</option>
-        <option value="orgCabos">Organizadores de Cabos</option>
-        <option value="habRede">Habilitar Pontos de Rede</option>
-        <option value="cabRede">Cabos de Rede</option>
-        <option value="mantenedor">Mantenedores</option>
-        <option value="lab">Laboratório</option>
-        <option value="desloc">Deslocamento</option>
-        <option value="outros">Outros</option>
-    </select>
- 
+     
+    </div>
 
     <div class = "toolsBar">
-        <button onclick="copyCall()">
+        <button class="toolButton" onclick="copyCall()">
             <img src="/Catll/assets/edit.png" style="width: 20px; height: 20px;">
-            
         </button>
         
-        <button onclick="copyResp()">
+        <button class="toolButton" onclick="copyResp()">
             <img src="/Catll/assets/check.png" style="width: 20px; height: 20px;">
-            
         </button>
 
+        <button class="toolButton" onclick="clearAllInputs()">
+            <img src="/Catll/assets/delete.png" style="width: 20px; height: 20px;">
+        </button>
+    </div>  
+
+    <div class ='containerCh'>
+        <div class="result" id="chamado"></div>
+    </div>
+    
+    <div class ='containerRsp'>
+        <div class="result" id="resposta"></div>
+    </div>
 
 
-        <button onclick="clearAllInputs()"><img src="/Catll/assets/delete.png" style="width: 20px; height: 20px;"></button>
-    </div>       
 
-<div class ='outputTextCham'>
-    <div class="result" id="chamado"></div>
-</div>
-
-<div class ='outputTextResp'>
-    <div class="result" id="resposta"></div>
-</div>
 
    
 </body>
