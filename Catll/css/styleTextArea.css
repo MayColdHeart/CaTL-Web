@@ -2,5 +2,8 @@
     position: absolute;
     right: 0;
     top: 13%;
+    overflow: hidden;
+    
+    
     
 }
