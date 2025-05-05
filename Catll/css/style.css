@@ -74,11 +74,11 @@ body{
 
 .toolsBar {
     display: flex;
-    flex-direction: column;
-    right: 0;
-    margin: 1px;
-    background-color: #1c1f2281;
-    position: fixed;
+    left: 23%;
+    top: 56.1%;
+    margin: 2px;
+    position: absolute;
+    background-color: transparent;
 }
 
 

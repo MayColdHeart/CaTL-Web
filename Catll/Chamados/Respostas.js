@@ -78,7 +78,7 @@ function remanInterResp(){
 
 //Melhorar a implementação de remanejamento. Planejar melhor isso
 function remanExtrResp(){
-    const { itemConf, localizacao, solicitante, ramal, aceite } = obterDados();
+    const { localizacao, solicitante, ramal, aceite } = obterDados();
 
     return `✔️ Os equipamentos foram remanejados para o local indicado pelo usuário conforme foi solicitado.
 

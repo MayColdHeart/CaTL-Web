@@ -1,13 +1,12 @@
 
 function obterDados(){
     const nchamado = document.getElementById('nchamado').value;
-    const eqEspecif = document.getElementById('eqEspecif').value;
     const itemConf = document.getElementById('itemConf').value;
     const localizacao = document.getElementById('localizacao').value;
     const solicitante = document.getElementById('solicitante').value;
     const ramal = document.getElementById('ramal').value;
     
-    return {nchamado, itemConf, eqEspecif, localizacao, solicitante, ramal};
+    return {nchamado, itemConf, localizacao, solicitante, ramal};
 }
 
 function novoEquipamento() {
@@ -35,14 +34,14 @@ function novoEquipamento() {
 }
 
 function instalaEquip() {
-    const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
+    const { nchamado, itemConf, localizacao, solicitante, ramal } = obterDados();
 
 
     return `➡️ Referente ao chamado: #${nchamado}
             
             • Solicito a instalação de equipamentos.
             
-            💻 - Equipamento: ${eqEspecif}
+            💻 - Equipamento: ${itemConf}
             _____________________________________________
             
             📍 - Localização: ${localizacao}
@@ -52,13 +51,13 @@ function instalaEquip() {
 }
 
 function desinstalaEquip(){
-    const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
+    const { nchamado, itemConf, localizacao, solicitante, ramal } = obterDados();
 
     return `➡️ Referente ao chamado: #${nchamado}
             
             • Solicito a desinstalação de equipamentos.
             
-            💻 - Equipamento: ${eqEspecif}
+            💻 - Equipamento: ${itemConf}
             _____________________________________________
             
             📍 - Localização: ${localizacao}
@@ -68,13 +67,13 @@ function desinstalaEquip(){
 }
 
 function remanInter(){
-    const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
+    const { nchamado, itemConf, localizacao, solicitante, ramal } = obterDados();
 
     return `➡️ Referente ao chamado: #${nchamado}
             
             • Solicito o remanejamento interno de equipamentos.
             
-            💻 - Equipamento: ${eqEspecif}
+            💻 - Equipamento: ${itemConf}
             _____________________________________________
             
             📍 - Localização: ${localizacao}
@@ -84,13 +83,13 @@ function remanInter(){
 }
 
 function remanExtr(){
-    const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
+    const { nchamado, itemConf, localizacao, solicitante, ramal } = obterDados();
 
     return `➡️ Referente ao chamado: #${nchamado}
                 
             • Solicito o remanejamento externo de equipamentos.
                 
-            💻 - Equipamento: ${eqEspecif}
+            💻 - Equipamento: ${itemConf}
             _____________________________________________
             
             📍 - Localização: ${localizacao}
@@ -100,11 +99,11 @@ function remanExtr(){
 }
 
 function attCadastral(){
-    const { nchamado, eqEspecif, itemConf, solicitante, ramal, aceite } = obterDados();
+    const { nchamado, itemConf, solicitante, ramal, aceite } = obterDados();
 
     return `➡️ Referente ao chamado: #${nchamado}
 
-            🔄 Solicito atualização cadastral do equipamento ${eqEspecif}.
+            🔄 Solicito atualização cadastral do equipamento ${itemConf}.
 
             📦 - Item de Configuração: ${itemConf}
 
@@ -142,13 +141,13 @@ function attCadastral(){
 //Linha 132 - 139 -> precisa aparecer como resposta
 
 function cabosVideo(){
-    const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
+    const { nchamado, itemConf, localizacao, solicitante, ramal } = obterDados();
     
     return `➡️ Referente ao chamado: #${nchamado}
             
             • Solicito um Kit de cabos de vídeo para dar continuidade ao atendimento
             
-            💻 - Equipamento: ${eqEspecif}
+            💻 - Equipamento(s): ${itemConf}
             ____________________________________________
             
             📍 - Localização: ${localizacao}
@@ -164,13 +163,13 @@ function cabosVideo(){
 }
 
 function solictMouse(){
-    const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
+    const { nchamado, itemConf, localizacao, solicitante, ramal } = obterDados();
 
     return `➡️ Referente ao chamado: #${nchamado}
             
             • Solicito um mouse para dar continuidade ao atendimento
             
-            💻 - Equipamento: ${eqEspecif}
+            💻 - Equipamento(s): ${itemConf}
             ____________________________________________
             
             📍 - Localização: ${localizacao}
@@ -186,13 +185,13 @@ function solictMouse(){
 }
 
 function solictTecld(){
-    const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
+    const { nchamado, itemConf, localizacao, solicitante, ramal } = obterDados();
 
     return `➡️ Referente ao chamado: #${nchamado}
             
             • Solicito um teclado para dar continuidade ao atendimento.
             
-            💻 - Equipamento: ${eqEspecif}
+            💻 - Equipamento(s): ${itemConf}
             ____________________________________________
             
             📍 - Localização: ${localizacao}
@@ -208,13 +207,13 @@ function solictTecld(){
 }
 
 function OrgCabos(){
-    const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
+    const { nchamado, itemConf, localizacao, solicitante, ramal } = obterDados();
 
     return `➡️ Referente ao chamado: #${nchamado}
                 
             • Solicito um organizador de cabos para dar continuidade ao atendimento
         
-            💻 - Equipamento: ${eqEspecif}
+            💻 - Equipamento(s): ${itemConf}
             ____________________________________________
         
             📍 - Localização: ${localizacao}
@@ -230,11 +229,11 @@ function OrgCabos(){
 }
 
 function habPontRede(){
-    const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
+    const { nchamado, itemConf, localizacao, solicitante, ramal } = obterDados();
     
     return `➡️ Referente ao chamado: #${nchamado}
                     
-            • Solicito a habilitação do ponto de rede no local para o equipamento "${eqEspecif}".
+            • Solicito a habilitação do ponto de rede no local para o equipamento "${itemConf}".
         
             ____________________________________________
                     
@@ -251,11 +250,11 @@ function habPontRede(){
 }
 
 function caboRede(){
-    const { nchamado, eqEspecif, localizacao, solicitante, ramal } = obterDados();
+    const { nchamado, itemConf, localizacao, solicitante, ramal } = obterDados();
     
     return `➡️ Referente ao chamado: #${nchamado}
                     
-            • Solicito a disponibilidade de um cabo de rede no local para o equipamento "${eqEspecif}".
+            • Solicito a disponibilidade de um cabo de rede no local para o equipamento "${itemConf}".
 
             ____________________________________________
                     
@@ -272,13 +271,13 @@ function caboRede(){
 }
 
 function mantenedores(){
-    const { nchamado, eqEspecif, localizacao, solicitante, ramal, aceite } = obterDados();
+    const { nchamado, itemConf, localizacao, solicitante, ramal, aceite } = obterDados();
 
     return `➡️ Referente ao chamado: #${nchamado}
                         
             💬 
                         
-            💻 - Equipamento: ${eqEspecif}
+            💻 - Equipamento: ${itemConf}
             #️⃣ - Número de Série:
             ____________________________________________
                         
@@ -295,13 +294,11 @@ function mantenedores(){
 }
 
 function laboratorio(){
-    const { eqEspecif, itemConf, localizacao, solicitante, ramal, aceite } = obterDados();
+    const { itemConf, localizacao, solicitante, ramal, aceite } = obterDados();
     
-    return `• O equipamento "${eqEspecif}" foi recolhido do local e entregue ao laboratório. 
+    return `• O equipamento "${itemConf}" foi recolhido do local e entregue ao laboratório. 
 
             ⚠️         
-
-            📦 - Item de Configuração: ${itemConf}
             
            _____________________________________________
 
@@ -321,13 +318,12 @@ function laboratorio(){
 
 
 function outros(){
-    const { eqEspecif, itemConf, localizacao, solicitante, ramal, aceite } = obterDados();
+    const { itemConf, localizacao, solicitante, ramal, aceite } = obterDados();
 
     return  `•  
 
-            💻 - Equipamento: ${eqEspecif}
+            💻 - Equipamento: ${itemConf}
         
-            📦 - Item de Configuração: ${itemConf}
 
             _____________________________________________
 
