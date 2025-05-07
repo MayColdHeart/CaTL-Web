@@ -1,7 +1,6 @@
 
 function obterDados(){
     const nchamado = document.getElementById('nchamado').value;
-    const eqEspecif = document.getElementById('eqEspecif').value;
     const itemConf = document.getElementById('itemConf').value;
     const localizacao = document.getElementById('localizacao').value;
     const solicitante = document.getElementById('solicitante').value;
@@ -9,7 +8,7 @@ function obterDados(){
     const aceite = document.getElementById('aceite').value;
     
     
-    return {nchamado, itemConf, eqEspecif, localizacao, solicitante, ramal, aceite};
+    return {nchamado, itemConf, localizacao, solicitante, ramal, aceite};
 }
 
 function instalaResp() {
