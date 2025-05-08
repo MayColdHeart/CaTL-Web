@@ -2,11 +2,12 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/components/containers.css">
-    <link rel="stylesheet" href="css/components/colors.css">
-    <link rel="stylesheet" href="css/styleTextArea.css">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <link rel="stylesheet" href="/CaTL-Web/constants/colors.css">
+    <link rel="stylesheet" href="/CaTL-Web/constants/containers.css">
+    <link rel="stylesheet" href="/CaTL-Web/resources/css/style.css">
+    <link rel="stylesheet" href="/CaTL-Web/resources/css/styleTextArea.css">
+    <link rel="stylesheet" href="/CaTL-Web/constants/button.css">
 </head>
 
 <header>
@@ -64,25 +65,18 @@
             <option value="lab">Laboratório</option>
             <option value="desloc">Deslocamento</option>
             <option value="outros">Outros</option>
+            
         </select>
-     
+         <div class = "toolsBar">
+        <button class="toolButton" onclick="copyCall()">C</button>
+        <button class="toolButton" onclick="copyResp()">CR</button>
+        <button class="toolButton" onclick="clearAllInputs()">Del</button>
+    </div>  
     
      
     </div>
 
-    <div class = "toolsBar">
-        <button class="toolButton" onclick="copyCall()">
-            <img src="assets/edit.png" style="width: 20px; height: 20px;">
-        </button>
-        
-        <button class="toolButton" onclick="copyResp()">
-            <img src="assets/check.png" style="width: 20px; height: 20px;">
-        </button>
 
-        <button class="toolButton" onclick="clearAllInputs()">
-            <img src="assets/delete.png" style="width: 20px; height: 20px;">
-        </button>
-    </div>  
 
     <div class ='containerCh'>
         <div class="result" id="chamado"></div>
@@ -100,9 +94,9 @@
 
    
 </body>
-<script src="Chamados/chamados.js"></script>
-<script src="Chamados/Respostas.js"></script>
-<script src="Functions/clearallInputs.js"></script>
-<script src="Functions/copy.js" ></script>
-<script src="Functions/geradorChamados.js"></script>
+<script src="/CaTL-Web/resources/js/geradorChamados.js"></script>
+<script src="/CaTL-Web/resources/js/clearallInputs.js"></script>
+<script src="/CaTL-Web/resources/js/copy.js"></script>
+<script src="/CaTL-Web/resources/js/chamados.js" ></script>
+<script src="/CaTL-Web/resources/js/Respostas.js"></script>
 </html>

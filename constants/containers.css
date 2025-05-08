@@ -6,30 +6,33 @@
     margin-left: 2%;
     left: 0;
     border-style: solid;
-    border-radius: 10px;
-    border-color: #2c2c2c;
+    box-shadow: 4px 4px rgb(17, 17, 17);
+    border-radius: 6px;
+    border-color: #2a2b2c;
 }
 
 .containerCh {
     width: 45%;
-    color: #FFF;
     background-color: #1c1f22;
     padding: 10px;
     margin-top: 2%;
     margin-left: 2%;
+    left: 0;
     border-style: solid;
-    border-radius: 10px;
-    border-color: #2c2c2c;
+    box-shadow: 4px 4px rgb(17, 17, 17);
+    border-radius: 6px;
+    border-color: #2a2b2c;
 }
 
 .containerRsp {
     width: 45%;
-    color: #FFF;
     background-color: #1c1f22;
     padding: 10px;
     margin-top: 2%;
     margin-left: 2%;
+    left: 0;
     border-style: solid;
-    border-radius: 10px;
-    border-color: #2c2c2c;
+    box-shadow: 4px 4px rgb(17, 17, 17);
+    border-radius: 6px;
+    border-color: #2a2b2c;
 }
