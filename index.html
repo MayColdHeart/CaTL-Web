@@ -45,10 +45,11 @@
         </form>
         
         <hr>
-        
-        <label class="tipoCham">Tipo de Chamado:</label>
+
+        <div class="containerTools">
 
         <select id="tipoChamadoSelect" onclick="escolheTipoCham()" onkeypress="escolheTipoCham()">
+            <option>Tipo de Chamado </option>
             <option value="novoEquipamento">Novo Equipamento</option>
             <option value="instalacao">Instalação</option>
             <option value="desinstala">Desinstalação</option>
@@ -67,12 +68,14 @@
             <option value="outros">Outros</option>
             
         </select>
-         <div class = "toolsBar">
-        <button class="toolButton" onclick="copyCall()">C</button>
-        <button class="toolButton" onclick="copyResp()">CR</button>
+
+
+        <button class="toolButton" onclick="copyCall()">Call</button>
+        <button class="toolButton" onclick="copyResp()">Resp</button>
         <button class="toolButton" onclick="clearAllInputs()">Del</button>
-    </div>  
-    
+        </div>
+        
+        
      
     </div>
 
@@ -87,7 +90,7 @@
     </div>
 
 
-    <textarea id="textArea" rows="50" cols="80"></textarea>
+    <textarea id="textArea" rows="40" cols="2"></textarea>
 
 
 

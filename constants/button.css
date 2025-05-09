@@ -1,13 +1,9 @@
 .toolButton {
-    display:block;
-    float: left;
-    position: relative;
-    left: 50%;
+  margin: 5px;
+  display: inline-grid;
+  width: 50px;
   border: 2px solid rgba(#fff, 0.6);
-  padding: 20px 32px;
   transform: translate(-50%, -50%);
-  font-family: sans-serif;
-  text-transform: uppercase;
   color: rgba(#fff, 0.8);
   cursor: pointer;
   transition: border-color 0.5s, background-color 0.5s, color 0.5s;
@@ -17,5 +13,4 @@
     background-color: #fff;
     border-color: transparent;
     color: #444
-
 }

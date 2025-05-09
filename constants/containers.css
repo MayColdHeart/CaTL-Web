@@ -36,3 +36,12 @@
     border-radius: 6px;
     border-color: #2a2b2c;
 }
+
+.containerTools {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+
+}

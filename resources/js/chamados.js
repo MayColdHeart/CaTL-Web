@@ -341,7 +341,7 @@ function outros(){
 }
 
 function deslocamento(){
-    const { eqEspecif, itemConf, localizacao, solicitante, ramal, aceite } = obterDados();
+    const { itemConf, localizacao, solicitante, ramal } = obterDados();
     return `➡️ Técnico indo ao local
             
             _____________________________________________
@@ -352,7 +352,7 @@ function deslocamento(){
            
 
            ___________________________________________
-           💻 - Equipamento: ${eqEspecif}
+
            📦 - Item de Configuração: ${itemConf}
         
            📍 - Localização:${localizacao}
